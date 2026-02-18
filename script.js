@@ -32,14 +32,14 @@ function playDrama() {
     }
 
     else if (step === 2) {
-        narration.innerText = "უცებ გაუგებრობა...";
+        narration.innerText = "გაუგებრობა...";
         maiko.querySelector('.head').style.borderColor = "red";
         say("😔", "right");
     }
 
     // 👇 მესამე ტიპი ჩნდება
     else if (step === 3) {
-        narration.innerText = "ვიღაც მესამე ჩნდება...(სახელცი არვიცი)";
+        narration.innerText = "ვიღაც მესამე ჩნდება...(სახელიც არვიცი)";
         intruder.style.opacity = "1";
         intruder.style.bottom = "0px";
         say("😏", "left");
@@ -47,7 +47,7 @@ function playDrama() {
 
     // 👇 ზაზა აგდებს
     else if (step === 4) {
-        narration.innerText = "...";
+        narration.innerText = "არადა არმაქვს ხოლმე ასეთი სიმთვრალე :(";
         intruder.style.left = "800px"; // გაფრინდა სცენიდან
         intruder.style.transform = "rotate(720deg)";
         say("🚀", "left");
@@ -69,3 +69,4 @@ function playDrama() {
         step = 0;
     }
 }
+
