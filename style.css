@@ -37,3 +37,15 @@ button { margin-top: 50px; padding: 10px 20px; cursor: pointer; background: #e74
     opacity: 0;
     transition: all 1s ease;
 }
+#choices button {
+    margin: 5px;
+    background: #3498db;
+}
+
+.walk-away {
+    transform: translateX(-200px);
+}
+
+.walk-away-right {
+    transform: translateX(200px);
+}
