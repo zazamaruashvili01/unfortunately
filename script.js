@@ -32,14 +32,14 @@ function playDrama() {
     }
 
     else if (step === 2) {
-        narration.innerText = "გაუგებრობა...";
+        narration.innerText = "უცებ გაუგებრობა...";
         maiko.querySelector('.head').style.borderColor = "red";
         say("😔", "right");
     }
 
     // 👇 მესამე ტიპი ჩნდება
     else if (step === 3) {
-        narration.innerText = "ვიღაც მესამე ჩნდება...(სახელიც არვიცი)";
+        narration.innerText = "ვიღაც მესამე ჩნდება...(სახელცი არვიცი)";
         intruder.style.opacity = "1";
         intruder.style.bottom = "0px";
         say("😏", "left");
@@ -47,7 +47,7 @@ function playDrama() {
 
     // 👇 ზაზა აგდებს
     else if (step === 4) {
-        narration.innerText = "არადა არმაქვს ხოლმე ასეთი სიმთვრალე :(";
+        narration.innerText = "...";
         intruder.style.left = "800px"; // გაფრინდა სცენიდან
         intruder.style.transform = "rotate(720deg)";
         say("🚀", "left");
@@ -59,9 +59,12 @@ function playDrama() {
         zaza.style.transform = "rotate(20deg)";
     }
 
-    else if (step === 6) {
-        narration.innerText = "საბოლოოდ...?";
-    }
+   else if (step === 6) {
+    narration.innerText = "გადაწყვეტილება შენზეა...";
+    document.getElementById("choices").style.display = "block";
+    bubbles.innerHTML = "";
+}
+
 
     else {
         narration.innerText = "...";
@@ -70,3 +73,30 @@ function playDrama() {
     }
 }
 
+function forgive() {
+    const choices = document.getElementById("choices");
+    choices.style.display = "none";
+
+    narration.innerText = "❤️";
+
+    // მიუახლოვდნენ
+    zaza.style.left = "220px";
+    maiko.style.right = "220px";
+
+    // ხელჩაკიდება (უბრალოდ მიაბრუნებს ხელებს)
+    zaza.querySelector(".arm.right").style.transform = "rotate(0deg)";
+    maiko.querySelector(".arm.left").style.transform = "rotate(0deg)";
+
+    bubbles.innerHTML = "❤️❤️❤️";
+}
+function notForgive() {
+    const choices = document.getElementById("choices");
+    choices.style.display = "none";
+
+    narration.innerText = ":(...";
+
+    zaza.classList.add("walk-away");
+    maiko.classList.add("walk-away-right");
+
+    bubbles.innerHTML = "💔";
+}
