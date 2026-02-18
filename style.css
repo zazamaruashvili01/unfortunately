@@ -1,0 +1,39 @@
+body { background: #2c3e50; display: flex; justify-content: center; align-items: center; height: 100vh; overflow: hidden; color: white; font-family: sans-serif; }
+.stage { text-align: center; position: relative; width: 600px; height: 400px; border-bottom: 5px solid white; }
+
+/* სთიქმენის სტრუქტურა */
+.stickman { position: absolute; bottom: 0; transition: all 1s ease; }
+.head { width: 30px; height: 30px; border: 3px solid white; border-radius: 50%; margin: 0 auto; }
+.body { width: 3px; height: 50px; background: white; margin: 0 auto; }
+.arm, .leg { position: absolute; width: 25px; height: 3px; background: white; }
+.arm.left { transform: rotate(-45deg); left: -10px; top: 40px; }
+.arm.right { transform: rotate(45deg); right: -10px; top: 40px; }
+.leg.left { transform: rotate(45deg); left: -10px; bottom: -15px; }
+.leg.right { transform: rotate(-45deg); right: -10px; bottom: -15px; }
+
+#zaza { left: 50px; }
+#maiko { right: 50px; }
+.name { display: block; margin-top: 50px; font-size: 12px; color: #ffcc00; }
+
+/* დიალოგის ბუშტი */
+.bubble {
+    position: absolute; background: white; color: black; padding: 10px;
+    border-radius: 15px; bottom: 150px; font-weight: bold; animation: fadeIn 0.5s;
+}
+@keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+
+button { margin-top: 50px; padding: 10px 20px; cursor: pointer; background: #e74c3c; color: white; border: none; border-radius: 5px; }
+.stickman {
+    position: absolute;
+    bottom: 0;
+    transition: all 1s ease;
+}
+
+.stickman .head {
+    transition: 0.5s;
+}
+#intruder {
+    left: 270px;
+    opacity: 0;
+    transition: all 1s ease;
+}
